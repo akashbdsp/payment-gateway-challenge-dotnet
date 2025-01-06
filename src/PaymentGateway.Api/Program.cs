@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<PaymentsRepository>();
+builder.Services.AddHttpClient<IAcquiringBankService, AcquiringBankService>();
 
 var app = builder.Build();
 
